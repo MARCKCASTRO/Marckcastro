@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfólio de Marcos “Marck” Castro, designer gráfico em Belém: eventos, marcas e empresas.">
+<meta property="og:title" content="Marck Castro · Portfólio">
+<meta property="og:description" content="Design para eventos, marcas e empresas. Make a difference.">
+<meta property="og:image" content="video/capa-poster.jpg">
+<link rel="icon" type="image/png" href="img/mark-preta.png">
+<style>[hidden]{display:none!important} html,body{margin:0}</style>
+<title>Marck Castro Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#1E1E20;
+  --deep:#131315;
+  --paper:#F5EFE6;
+  --sheet:#FBF8F3;
+  --soft:#D0D0D3;
+  --mute:#8E8E93;
+  --line:#38383C;
+  --red:#FF2838;
+  --display:'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --gutter:clamp(16px, 3vw, 40px);
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ink); color:var(--paper); font-family:var(--display); font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased}
+img,video{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer; padding:0}
+:focus-visible{outline:2px solid var(--red); outline-offset:3px}
+.wrap{padding-inline:var(--gutter)}
+.label{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase}
+.muted{color:var(--mute)}
+.red{color:var(--red)}
+.cond{font-stretch:125%; font-weight:300; text-transform:uppercase; letter-spacing:-.045em}
+.cond b{font-weight:900; color:var(--red)}
+
+/* ---------- negative cursor ---------- */
+.cursor{position:fixed; left:0; top:0; z-index:100; width:14px; height:14px; margin:-7px 0 0 -7px; border-radius:50%;
+  background:#fff; mix-blend-mode:difference; pointer-events:none; opacity:0;
+  transition:width .35s cubic-bezier(.165,.84,.44,1), height .35s cubic-bezier(.165,.84,.44,1), margin .35s cubic-bezier(.165,.84,.44,1), opacity .2s}
+.cursor.on{opacity:1}
+.cursor.big{width:72px; height:72px; margin:-36px 0 0 -36px}
+@media (hover:none),(pointer:coarse){.cursor{display:none}}
+
+/* ---------- header ---------- */
+.top{position:fixed; inset:0 0 auto 0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding-block:calc(env(safe-area-inset-top,0px) + 14px) 14px; transition:background .3s, color .3s}
+body.solid .top{background:color-mix(in srgb, var(--ink) 84%, transparent); backdrop-filter:saturate(1.4) blur(14px); -webkit-backdrop-filter:saturate(1.4) blur(14px)}
+body.light .top{background:color-mix(in srgb, var(--sheet) 88%, transparent); color:var(--ink)}
+.brand{display:flex; align-items:center; gap:12px}
+.brand img{width:38px; height:auto}
+.brand .dark{display:none}
+body.light .brand .dark{display:block}
+body.light .brand .lightlogo{display:none}
+.brand span{font-size:12px; letter-spacing:.06em; text-transform:uppercase}
+.nav{display:flex; gap:4px}
+.nav a{font-size:12px; letter-spacing:.06em; text-transform:uppercase; padding:8px 14px; border-radius:999px; transition:background .25s, color .25s}
+.nav a:hover{background:var(--paper); color:var(--ink)}
+body.light .nav a:hover{background:var(--ink); color:var(--paper)}
+.nav a[aria-current="page"]{box-shadow:inset 0 0 0 1px currentColor}
+
+/* ---------- hero ---------- */
+.hero{position:relative; height:200vh; height:200svh}
+.hero-pin{position:sticky; top:0; height:100vh; height:100svh; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end}
+.hero-media{position:absolute; inset:0; overflow:hidden; will-change:clip-path, transform; background:#0E0E10}
+.hero-media video,.hero-media img{width:100%; height:100%; object-fit:cover}
+.hero-media::after{content:""; position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(14,14,16,.55), rgba(14,14,16,.15) 25%, rgba(14,14,16,.35) 55%, rgba(14,14,16,.92)),
+             radial-gradient(90% 70% at 40% 62%, rgba(14,14,16,.55), transparent 70%)}
+.hero-copy{position:relative; z-index:2; padding-block:0 26px; will-change:opacity, transform}
+.hero-type{margin:0; font-weight:300; font-stretch:125%; text-transform:uppercase; font-size:clamp(40px, 9.6vw, 164px); line-height:.88; letter-spacing:-.05em}
+.hero-type .l{display:block}
+.hero-type .l1{padding-left:6%}
+.hero-type .l2{padding-left:24%; font-weight:900; color:var(--red); letter-spacing:-.055em; text-shadow:0 6px 40px rgba(14,14,16,.6)}
+.hero-type .l3{padding-left:40%}
+.hero-foot{display:flex; justify-content:space-between; align-items:end; gap:16px; margin-top:clamp(28px,4vw,56px)}
+.hero-foot .motto{margin:0; font-weight:600; font-size:clamp(22px,2.6vw,38px); letter-spacing:-.03em; line-height:1}
+.hero-foot .motto span{color:var(--red)}
+.hero-foot small{font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--soft)}
+.hero-say{position:absolute; z-index:2; inset:0; display:grid; place-items:center; text-align:center; opacity:0; pointer-events:none; padding-inline:var(--gutter)}
+.hero-say p{margin:0; font-weight:600; font-size:clamp(34px,6vw,92px); line-height:1; letter-spacing:-.035em; max-width:17ch; text-wrap:balance}
+.grad{background:linear-gradient(100deg, var(--paper) 10%, #ffb3ba 45%, var(--red) 75%, var(--paper) 110%); background-size:220% 100%;
+  -webkit-background-clip:text; background-clip:text; color:transparent; animation:sheen 9s ease-in-out infinite alternate}
+@keyframes sheen{from{background-position:0% 50%} to{background-position:100% 50%}}
+
+/* ---------- statement ---------- */
+.statement{padding-block:clamp(80px,12vw,180px) clamp(24px,4vw,56px)}
+.statement p{margin:0 auto; max-width:24ch; font-weight:600; font-size:clamp(30px,4.8vw,70px); line-height:1.06; letter-spacing:-.035em; text-align:center; text-wrap:balance}
+.statement .w{opacity:.28; transition:opacity .3s}
+.statement .w.lit{opacity:1}
+
+/* ---------- section label ---------- */
+.seclabel{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; border-top:1px solid var(--line); padding-block:18px 10px; margin-top:clamp(56px,8vw,112px)}
+.seclabel b{font-weight:200; font-size:clamp(56px,9vw,132px); line-height:.85; letter-spacing:-.04em}
+.seclabel h2{margin:0; font-weight:300; font-size:clamp(40px,9vw,132px); line-height:.85; letter-spacing:-.045em; text-transform:uppercase; text-align:right}
+
+/* ---------- rows (negative hover) ---------- */
+.index{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+.index li{border-bottom:1px solid var(--line)}
+.row{display:grid; grid-template-columns:48px minmax(0,1fr) auto 44px; align-items:center; gap:16px; padding:clamp(16px,2.2vw,26px) 12px; transition:background .3s, color .3s}
+.row .n{font-family:var(--mono); font-size:12px; opacity:.6}
+.row .name{font-weight:300; font-size:clamp(32px,6.2vw,100px); line-height:.92; letter-spacing:-.04em; text-transform:uppercase}
+.row .tags{display:flex; flex-wrap:wrap; gap:6px; justify-content:flex-end}
+.chip{font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; border:1px solid currentColor; border-radius:999px; padding:4px 10px; white-space:nowrap; opacity:.75}
+.arrow{width:44px; height:44px; border:1px solid currentColor; border-radius:50%; display:grid; place-items:center}
+.row:hover,.row:focus-visible{background:var(--paper); color:var(--ink)}
+
+/* ---------- PROJETOS (light, editorial carousel) ---------- */
+.pj{background:var(--sheet); color:var(--ink); min-height:100vh; padding-top:calc(env(safe-area-inset-top,0px) + 100px); padding-bottom:clamp(48px,6vw,96px)}
+.pj-top{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; padding-block:clamp(16px,3vw,40px) clamp(24px,3vw,40px)}
+.pj-top h1{margin:0; font-size:clamp(44px,8vw,120px); line-height:.9}
+.stabs{display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; max-width:100%}
+.stabs::-webkit-scrollbar{display:none}
+.stab{flex:0 0 auto; font-stretch:125%; font-weight:500; font-size:13px; letter-spacing:.02em; text-transform:uppercase; border:1px solid rgba(30,30,32,.25); border-radius:999px; padding:12px 26px; transition:background .25s,color .25s,border-color .25s}
+.stab:hover{border-color:var(--ink)}
+.stab[aria-selected="true"]{background:var(--ink); color:var(--sheet); border-color:var(--ink)}
+.client{padding-block:clamp(24px,3vw,40px)}
+.client-h{display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:1px solid rgba(30,30,32,.15); padding-top:14px; margin-bottom:22px}
+.client-h h2{margin:0; font-size:clamp(24px,2.8vw,38px); line-height:1}
+.client-h span{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#6b6b70}
+.car{position:relative; display:grid; grid-template-columns:48px minmax(0,1fr) 48px; align-items:center; gap:clamp(12px,2vw,28px)}
+.car .rail{display:flex; gap:clamp(12px,1.6vw,22px); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding-block:10px 150px; margin-bottom:-130px}
+.car .rail::-webkit-scrollbar{display:none}
+.nav-btn{width:48px; height:48px; border-radius:50%; display:grid; place-items:center; border:1px solid rgba(30,30,32,.3); background:var(--sheet); font-size:18px; transition:background .2s,color .2s, transform .2s}
+.nav-btn.fill{background:var(--ink); color:var(--sheet); border-color:var(--ink)}
+.nav-btn:hover{transform:scale(1.06)}
+.nav-btn[disabled]{opacity:.25; pointer-events:none}
+.pc{flex:0 0 clamp(200px, 21vw, 280px); scroll-snap-align:start; position:relative; transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.pc .ph{position:relative; display:block; width:100%; aspect-ratio:2/3; overflow:hidden; background:#e7e2da}
+.pc .ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.04); transition:opacity .6s ease, transform 1.2s ease}
+.pc .ph img.on{opacity:1; transform:scale(1)}
+.pc .go{position:absolute; top:12px; right:12px; z-index:2; width:40px; height:40px; border-radius:50%; background:var(--sheet); color:var(--ink); display:grid; place-items:center; font-size:15px; opacity:0; transform:scale(.8); transition:opacity .3s, transform .3s}
+.pc .dots{position:absolute; left:12px; right:12px; bottom:12px; z-index:2; display:flex; gap:4px; opacity:0; transition:opacity .3s}
+.pc .dots i{flex:1; height:2px; background:rgba(255,255,255,.4)}
+.pc .dots i.on{background:#fff}
+.pc .cap{position:absolute; left:0; right:0; top:100%; background:#fff; text-align:center; padding:16px 14px 18px; box-shadow:0 34px 50px -18px rgba(30,30,32,.35);
+  opacity:0; transform:translateY(-10px); transition:opacity .35s, transform .35s; pointer-events:none}
+.pc .cap .k{display:block; font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:#6b6b70}
+.pc .cap h3{margin:6px 0 10px; font-size:15px; line-height:1.1; letter-spacing:-.02em; font-weight:500}
+.pc .cap hr{width:24px; margin:0 auto 10px; border:0; border-top:1px solid #9a9aa0}
+.pc .cap .m{font-size:12px; color:#6b6b70}
+.pc:hover,.pc:focus-within{transform:translateY(-6px); z-index:3}
+.pc:hover .go,.pc:focus-within .go{opacity:1; transform:scale(1)}
+.pc:hover .dots,.pc:focus-within .dots{opacity:1}
+.pc:hover .cap,.pc:focus-within .cap{opacity:1; transform:translateY(0)}
+.pc.slot .ph{border:1px dashed rgba(30,30,32,.3); background:transparent; display:grid; place-items:center; text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#6b6b70; padding:20px}
+@media (hover:none){
+  .pc .cap{position:static; opacity:1; transform:none; box-shadow:none; background:transparent; padding-inline:0}
+  .pc .dots{opacity:1}
+  .car .rail{padding-bottom:10px; margin-bottom:0}
+}
+
+/* ---------- brandings ---------- */
+.page{padding-top:calc(env(safe-area-inset-top,0px) + 96px)}
+.head{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.62fr); gap:clamp(24px,4vw,64px); align-items:end; padding-block:clamp(24px,4vw,56px) 28px}
+.head h1{margin:10px 0 0; font-weight:300; font-size:clamp(56px,11vw,176px); line-height:.84; letter-spacing:-.05em; text-transform:uppercase}
+.head .desc{font-size:clamp(16px,1.35vw,19px); color:var(--soft); max-width:46ch; margin:0}
+.brandgrid{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(24px,4vw,64px); align-items:start; padding-block:32px}
+.cards{display:flex; flex-direction:column; gap:14px; max-width:620px}
+.biz{aspect-ratio:1.7/1; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(16px,2.6vw,32px); box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.biz.white{background:var(--paper); color:var(--ink)}
+.biz.black{background:#000; align-items:center; justify-content:center}
+.biz .mini{margin:0; font-size:10px; text-transform:uppercase; letter-spacing:.04em; text-align:center; line-height:1.15}
+.biz .ask{margin:0; align-self:center; font-weight:300; font-stretch:125%; font-size:clamp(24px,4.2vw,54px); letter-spacing:-.05em; line-height:1; text-transform:uppercase}
+.biz .ask b{font-weight:900; color:var(--red)}
+.biz .meta{display:flex; justify-content:space-between; gap:12px; font-size:clamp(9px,1vw,11px); text-transform:uppercase; letter-spacing:.03em; line-height:1.3}
+.biz .meta p{margin:0}
+.redbox{background:var(--red); width:34%; aspect-ratio:1.4/1; display:grid; place-items:center}
+.redbox img{width:62%}
+.blist{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+.blist li{border-bottom:1px solid var(--line)}
+.blist .item{display:grid; grid-template-columns:1fr auto; gap:12px; padding:18px 12px; transition:background .3s,color .3s}
+.blist .item:hover{background:var(--paper); color:var(--ink)}
+.blist .item:hover p{color:var(--ink)}
+.blist h3{margin:0; font-weight:400; font-size:clamp(22px,2.6vw,32px); letter-spacing:-.02em; text-transform:uppercase}
+.blist p{margin:4px 0 0; color:var(--soft); font-size:14px; max-width:44ch}
+
+/* ---------- contato ---------- */
+.contact{position:relative; overflow:hidden; min-height:100vh; min-height:100svh; display:flex; flex-direction:column; justify-content:center; padding-block:calc(env(safe-area-inset-top,0px) + 110px) 64px}
+.contact canvas{position:absolute; inset:0; width:100%; height:100%}
+.contact::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.18; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.contact-in{position:relative; z-index:2; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(32px,5vw,80px); align-items:center}
+.contact h1{margin:0; font-weight:600; font-size:clamp(56px,10vw,168px); line-height:.9; letter-spacing:-.05em}
+.contact .lead{margin:24px 0 0; font-size:clamp(16px,1.4vw,20px); color:var(--soft); max-width:40ch}
+.clist{list-style:none; margin:36px 0 0; padding:0; border-top:1px solid rgba(245,239,230,.25)}
+.clist li{border-bottom:1px solid rgba(245,239,230,.25)}
+.clist a,.clist .static{display:grid; grid-template-columns:120px 1fr auto; gap:16px; align-items:center; padding:16px 12px; transition:background .3s,color .3s}
+.clist a:hover{background:var(--paper); color:var(--ink)}
+.clist .v{font-size:clamp(16px,1.6vw,22px); letter-spacing:-.01em}
+.contact .cards{transform:rotate(-3deg)}
+
+/* ---------- footer / cta ---------- */
+.foot{background:var(--deep); color:var(--paper); padding-block:40px 0; overflow:hidden}
+.frow{display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; font-size:12px; text-transform:uppercase; letter-spacing:.05em}
+.frow nav{display:flex; flex-wrap:wrap; gap:6px 20px}
+.frow a:hover{color:var(--red)}
+.giant{margin:clamp(28px,4vw,56px) 0 0; font-weight:700; font-stretch:125%; font-size:22.5vw; line-height:.74; letter-spacing:-.055em; text-transform:uppercase; white-space:nowrap; transform:translateY(12%)}
+.giant span{color:var(--red)}
+.cta{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; padding-block:clamp(40px,6vw,80px)}
+.cta p{margin:0; font-weight:600; font-size:clamp(34px,6vw,88px); letter-spacing:-.04em; line-height:.95}
+.btn{display:inline-flex; align-items:center; gap:10px; border:1px solid currentColor; border-radius:999px; padding:14px 22px; font-size:13px; letter-spacing:.06em; text-transform:uppercase; transition:background .25s,color .25s}
+.btn:hover{background:var(--paper); color:var(--ink)}
+
+/* ---------- lightbox ---------- */
+.lb[hidden]{display:none}
+.lb{position:fixed; inset:0; z-index:90; background:rgba(10,10,12,.95); color:var(--paper); display:grid; grid-template-rows:auto 1fr auto; padding:calc(env(safe-area-inset-top,0px) + 16px) var(--gutter) calc(env(safe-area-inset-bottom,0px) + 16px)}
+.lb-top,.lb-bot{display:flex; justify-content:space-between; align-items:center; gap:16px}
+.lb figure{margin:0; min-height:0; display:grid; place-items:center; padding-block:16px}
+.lb figure img{max-height:100%; max-width:100%; object-fit:contain}
+.lb h3{margin:0; font-weight:400; font-size:15px; text-transform:uppercase; letter-spacing:.04em}
+.lb .ctrl{display:flex; gap:10px}
+.lb .ctrl button{width:44px; height:44px; border:1px solid var(--soft); border-radius:50%; display:grid; place-items:center}
+.lb .ctrl button:hover{background:var(--paper); color:var(--ink)}
+
+@media (max-width:760px){
+  .brand span{display:none}
+  .nav a{padding:7px 9px; font-size:11px}
+  .hero-type .l1{padding-left:0}
+  .hero-type .l2{padding-left:8%}
+  .hero-type .l3{padding-left:16%}
+  .row{grid-template-columns:28px minmax(0,1fr) 40px; padding-inline:6px}
+  .row .tags{display:none}
+  .arrow{width:40px; height:40px}
+  .head,.brandgrid,.contact-in{grid-template-columns:1fr}
+  .car{grid-template-columns:minmax(0,1fr)}
+  .car .nav-btn{display:none}
+  .clist a,.clist .static{grid-template-columns:84px 1fr auto}
+  .contact .cards{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important; animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<header class="top wrap">
+  <a class="brand" href="#inicio" aria-label="Início">
+    <img class="lightlogo" src="img/mark-branca.png" alt="Marca MARK de Marcos Castro" width="854" height="576">
+    <img class="dark" src="img/mark-preta.png" alt="" width="854" height="576">
+    <span>Marcos Castro</span>
+  </a>
+  <nav class="nav" aria-label="Principal">
+    <a href="#inicio" data-nav="inicio">Início</a>
+    <a href="#projetos" data-nav="projetos">Projetos</a>
+    <a href="#contato" data-nav="contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ================= INÍCIO ================= -->
+  <section data-view="inicio">
+    <div class="hero" id="hero">
+      <div class="hero-pin">
+        <div class="hero-media" id="heroMedia">
+          <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="video/capa-poster.jpg">
+            <source src="video/capa.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="hero-say" id="heroSay" aria-hidden="true"><p><span class="grad">Design</span> para eventos, marcas e empresas.</p></div>
+        <div class="hero-copy wrap" id="heroCopy">
+          <h1 class="hero-type">
+            <span class="l l1">Olá, eu sou</span>
+            <span class="l l2">Marck</span>
+            <span class="l l3">Castro</span>
+          </h1>
+          <div class="hero-foot">
+            <p class="motto">Make a difference<span>.</span></p>
+            <small>Belém · PA · ©2026</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="statement" id="statement">
+        <p data-words>Crio a comunicação de empresas, produtoras, incorporadoras e artistas. Cada projeto parte de um conceito claro e vira um sistema visual consistente, do lançamento à última peça.</p>
+      </div>
+
+      <div class="seclabel"><b>01</b><h2>Projetos</h2></div>
+      <ul class="index" id="homeServices"></ul>
+
+
+      <div class="cta">
+        <p>Tem um evento<br>ou uma marca?</p>
+        <a class="btn" href="#contato">Vamos conversar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETOS ================= -->
+  <section data-view="projetos" class="pj wrap" hidden>
+    <div class="pj-top">
+      <h1 class="cond" id="pjTitle">Eventos</h1>
+      <div class="stabs" role="tablist" aria-label="Serviços" id="stabs"></div>
+    </div>
+    <div id="pjBody" role="tabpanel"></div>
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section data-view="contato" hidden>
+    <div class="contact wrap">
+      <canvas id="grad" aria-hidden="true"></canvas>
+      <div class="contact-in">
+        <div>
+          <span class="label">Contato</span>
+          <h1>Vamos<br><span class="grad">criar?</span></h1>
+          <p class="lead">Conte o evento, a marca ou o lançamento. Eu respondo com uma ideia e um prazo.</p>
+          <ul class="clist" id="clist"></ul>
+        </div>
+        <div class="cards" data-bizcards></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <div class="frow">
+    <span>© 2026 Marcos “Marck” Castro</span>
+    <nav aria-label="Rodapé">
+      <a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
+    </nav>
+    <a href="https://www.instagram.com/warcoscastro/" target="_blank" rel="noopener">@warcoscastro ↗</a>
+  </div>
+  <p class="giant" aria-hidden="true">Marck<span>.</span></p>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Peça ampliada" hidden>
+  <div class="lb-top"><span class="label muted" id="lbCount"></span><button class="label" id="lbClose">Fechar ✕</button></div>
+  <figure><img id="lbImg" alt=""></figure>
+  <div class="lb-bot">
+    <div><h3 id="lbTitle"></h3><p class="label muted" id="lbMeta" style="margin:4px 0 0"></p></div>
+    <div class="ctrl"><button id="lbPrev" aria-label="Peça anterior">←</button><button id="lbNext" aria-label="Próxima peça">→</button></div>
+  </div>
+</div>
+
+<script>
+/* =================== CONTEÚDO — edite aqui =================== */
+const CONTATO = {
+  instagram: 'warcoscastro',
+  whatsapp: '+55 91 98452-5445',
+  email: '',        // ex.: 'contato@seudominio.com.br'
+  cidade: 'Belém · Pará'
+};
+
+const I = n => 'img/' + n + '.jpg';
+
+/* Projetos por SERVIÇO → CLIENTE → PROJETO (cada projeto com suas imagens).
+   Para incluir: adicione um projeto em "projetos", um cliente em "clientes" ou um serviço novo. */
+const SERVICOS = [
+  { id:'eventos', name:'Eventos', clientes:[
+    { name:'Grupo Stage', projetos:[
+      { name:'Tulum Beach Club', meta:'Vendas, programação e last week', imgs:[I('tulum-vendas'), I('tulum-programacao'), I('tulum-last-week')] },
+      { name:'Sunrise Emotions', meta:'Petroski · Aracaju', imgs:[I('sunrise-petroski')] }
+    ]},
+    { name:'A Vibe Produtora', projetos:[
+      { name:'Aurion Experience', meta:'Edition 2 e save the date', imgs:[I('aurion-ed2'), I('aurion-save')] },
+      { name:'Semkaô', meta:'Ariel B · Alto do Parque', imgs:[I('semkao-ariel')] }
+    ]},
+    { name:'Leal Moreira', projetos:[
+      { name:'Casa LiV 2026', meta:'Experiência Viva', imgs:[I('casaliv-1'), I('casaliv-2'), I('casaliv-4'), I('casaliv-3')] }
+    ]},
+    { name:'Artistas e shows', projetos:[
+      { name:'Mamãe me acordou', meta:'Stand-up', imgs:[I('mamae-me-acordou')] },
+      { name:'Os Caras do Norte', meta:'Turnê no Nordeste', imgs:[I('caras-do-norte')] },
+      { name:'Piquenique', meta:'Brisotti · Ilha do Combu', imgs:[I('piquenique-brisotti')] }
+    ]}
+  ]},
+  { id:'marcas', name:'Brandings / Marcas', clientes:[
+    { name:'Marca própria', projetos:[
+      { name:'MARK', meta:'Monograma · versões e cores', imgs:[I('mark-1'), I('mark-2'), I('mark-3')] }
+    ]},
+    { name:'Grupo Stage', projetos:[] },
+    { name:'Leal Moreira', projetos:[] },
+    { name:'A Vibe Produtora', projetos:[] }
+  ]}
+];
+
+/* ============================================================= */
+
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pad = n => String(n).padStart(2,'0');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const nProj = s => s.clientes.reduce((a,c)=>a+c.projetos.length,0);
+
+/* ---------- lightbox registry ---------- */
+let LB = [], lbGroup = [], lbIdx = 0;
+const reg = items => (LB.push(items), LB.length-1);
+
+/* ---------- shared blocks ---------- */
+function bizCards(){
+  const wa = CONTATO.whatsapp || 'Direção de arte';
+  return `<div class="biz white">
+      <p class="mini">Designer<br><strong style="font-size:13px">Marck Castro©</strong></p>
+      <p class="ask">Vamos <b>criar?</b></p>
+      <div class="meta"><p>${esc(CONTATO.cidade)}<br>${esc(CONTATO.email || 'Brasil')}</p><p style="text-align:right">${esc(wa)}<br>@${esc(CONTATO.instagram)}</p></div>
+    </div>
+    <div class="biz black"><div class="redbox"><img src="img/mark-preta.png" alt="Marca MARK em preto sobre vermelho"></div></div>`;
+}
+
+/* ---------- home ---------- */
+function renderHome(){
+  $('#homeServices').innerHTML = SERVICOS.map((s,i)=>`<li><a class="row" href="#${s.id}">
+      <span class="n">${pad(i+1)}</span><span class="name">${esc(s.name)}</span>
+      <span class="tags">${s.clientes.filter(c=>c.projetos.length).map(c=>`<span class="chip">${esc(c.name)}</span>`).join('')}</span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>`).join('');
+  const p = $('[data-words]');
+  if (!p.dataset.done){ p.innerHTML = p.textContent.split(' ').map(w=>`<span class="w">${esc(w)}</span>`).join(' '); p.dataset.done = 1; }
+}
+
+/* ---------- projetos ---------- */
+function projectCard(c, pr){
+  const g = reg(pr.imgs.map((src,k)=>({src, title:pr.name, meta:`${c.name} · ${pad(k+1)}/${pad(pr.imgs.length)}`})));
+  const dots = pr.imgs.length > 1 ? `<span class="dots">${pr.imgs.map((_,k)=>`<i class="${k?'':'on'}"></i>`).join('')}</span>` : '';
+  return `<article class="pc" data-slides>
+    <button class="ph" data-lb="${g}:0" aria-label="Ver ${esc(pr.name)}, ${pr.imgs.length} ${pr.imgs.length>1?'peças':'peça'}">
+      ${pr.imgs.map((src,k)=>`<img src="${src}" alt="${k?'':esc(pr.name)}" loading="lazy" class="${k?'':'on'}">`).join('')}
+      <span class="go" aria-hidden="true">↗</span>${dots}
+    </button>
+    <div class="cap"><span class="k">${esc(c.name)}</span><h3 class="cond" style="font-weight:500">${esc(pr.name)}</h3><hr><span class="m">${esc(pr.meta)}</span></div>
+  </article>`;
+}
+function renderProjetos(id){
+  const s = SERVICOS.find(x=>x.id===id) || SERVICOS[0];
+  $('#pjTitle').textContent = s.name;
+  $('#stabs').innerHTML = SERVICOS.map(x=>`<a class="stab" role="tab" href="#${x.id}" aria-selected="${x.id===s.id}">${esc(x.name)} · ${pad(nProj(x))}</a>`).join('');
+  $('#pjBody').innerHTML = s.clientes.map(c=>`
+    <section class="client">
+      <div class="client-h"><h2 class="cond">${esc(c.name)}</h2><span>${pad(c.projetos.length)} ${c.projetos.length===1?'projeto':'projetos'}</span></div>
+      <div class="car">
+        <button class="nav-btn" data-dir="-1" aria-label="Voltar" disabled>‹</button>
+        <div class="rail">${c.projetos.map(pr=>projectCard(c,pr)).join('') || `<div class="pc slot"><div class="ph">Em breve<br>${esc(s.name)} · ${esc(c.name)}</div></div>`}</div>
+        <button class="nav-btn fill" data-dir="1" aria-label="Avançar">›</button>
+      </div>
+    </section>`).join('');
+  $$('.car').forEach(updArrows);
+  $$('.car .rail').forEach(r=>r.addEventListener('scroll', ()=>updArrows(r.parentElement), {passive:true}));
+}
+function updArrows(car){
+  const r = car.querySelector('.rail'), [prev, next] = car.querySelectorAll('.nav-btn');
+  prev.disabled = r.scrollLeft < 4;
+  next.disabled = r.scrollLeft + r.clientWidth >= r.scrollWidth - 4;
+}
+
+/* hover slideshow inside the card */
+let slideTimer = 0, slideCard = null;
+function startSlides(card){
+  if (slideCard === card) return; stopSlides(); slideCard = card;
+  const imgs = $$('img', card); if (imgs.length < 2 || reduce) return;
+  const dots = $$('.dots i', card); let k = imgs.findIndex(i=>i.classList.contains('on'));
+  slideTimer = setInterval(()=>{
+    imgs[k].classList.remove('on'); dots[k]?.classList.remove('on');
+    k = (k+1) % imgs.length;
+    imgs[k].classList.add('on'); dots[k]?.classList.add('on');
+    const b = card.querySelector('[data-lb]'); b.dataset.lb = b.dataset.lb.split(':')[0] + ':' + k;
+  }, 1100);
+}
+function stopSlides(){ clearInterval(slideTimer); slideCard = null; }
+document.addEventListener('pointerover', e=>{ const c = e.target.closest('[data-slides]'); if (c) startSlides(c); else if (slideCard) stopSlides(); });
+document.addEventListener('focusin', e=>{ const c = e.target.closest('[data-slides]'); if (c) startSlides(c); });
+
+/* ---------- contato ---------- */
+function renderContato(){
+  const rows = [];
+  if (CONTATO.whatsapp){ const n = CONTATO.whatsapp.replace(/\D/g,'');
+    rows.push(`<li><a href="https://wa.me/${n}" target="_blank" rel="noopener"><span class="label">WhatsApp</span><span class="v">${esc(CONTATO.whatsapp)}</span><span aria-hidden="true">↗</span></a></li>`); }
+  if (CONTATO.email) rows.push(`<li><div class="static"><span class="label">E-mail</span><span class="v" style="user-select:all">${esc(CONTATO.email)}</span><span></span></div></li>`);
+  rows.push(`<li><a href="https://www.instagram.com/${esc(CONTATO.instagram)}/" target="_blank" rel="noopener"><span class="label">Instagram</span><span class="v">@${esc(CONTATO.instagram)}</span><span aria-hidden="true">↗</span></a></li>`);
+  rows.push(`<li><div class="static"><span class="label">Base</span><span class="v">${esc(CONTATO.cidade)}</span><span></span></div></li>`);
+  $('#clist').innerHTML = rows.join('');
+  $('[data-bizcards]').innerHTML = bizCards();
+}
+
+/* ---------- router ---------- */
+const SIDS = () => SERVICOS.map(s=>s.id);
+function route(){
+  LB = []; stopSlides();
+  const h = location.hash.slice(1) || 'inicio';
+  let view = SIDS().includes(h) ? 'projetos' : h;
+  if (!['inicio','projetos','contato'].includes(view)) view = 'inicio';
+  $$('[data-view]').forEach(v => v.hidden = v.dataset.view !== view);
+  if (view==='inicio') renderHome();
+  if (view==='projetos') renderProjetos(SIDS().includes(h) ? h : SERVICOS[0].id);
+  if (view==='contato') renderContato();
+  document.body.classList.toggle('light', view==='projetos');
+  $$('[data-nav]').forEach(a => a.dataset.nav===view ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
+  const vid = $('#heroVideo');
+  if (vid){ if (view==='inicio' && !reduce) vid.play().catch(()=>{}); else vid.pause(); }
+  grad.toggle(view==='contato');
+  window.scrollTo(0,0);
+  onScroll();
+}
+addEventListener('hashchange', route);
+
+/* ---------- scroll ---------- */
+function onScroll(){
+  const y = scrollY, onHome = !$('[data-view="inicio"]').hidden;
+  document.body.classList.toggle('solid', y > 40 || !onHome);
+  if (!onHome) return;
+  const hero = $('#hero'), vh = innerHeight;
+  const p = Math.min(1, Math.max(0, y / (hero.offsetHeight - vh)));
+  if (!reduce){
+    const ix = p*4, iy = p*9, r = p*28;
+    $('#heroMedia').style.clipPath = `inset(${iy}% ${ix}% ${iy}% ${ix}% round ${r}px)`;
+    $('#heroMedia').style.transform = `scale(${1 - p*.04})`;
+    const c = Math.min(1, p*2.2);
+    $('#heroCopy').style.opacity = 1 - c;
+    $('#heroCopy').style.transform = `translateY(${-c*60}px)`;
+    const s = Math.min(1, Math.max(0, (p-.35)/.35));
+    $('#heroSay').style.opacity = s;
+    $('#heroSay').style.transform = `scale(${.94 + s*.06})`;
+  }
+  const words = $$('#statement .w');
+  if (words.length){
+    const box = $('#statement').getBoundingClientRect();
+    const prog = Math.min(1, Math.max(0, (vh*.85 - box.top) / (vh*.6)));
+    const n = reduce ? words.length : Math.round(prog*words.length);
+    words.forEach((w,i)=>w.classList.toggle('lit', i < n));
+  }
+}
+addEventListener('scroll', onScroll, {passive:true});
+addEventListener('resize', onScroll);
+
+/* ---------- clicks ---------- */
+document.addEventListener('click', e=>{
+  const d = e.target.closest('[data-dir]');
+  if (d){ const r = d.parentElement.querySelector('.rail'); const c = r.firstElementChild;
+    r.scrollBy({left:(c.getBoundingClientRect().width+20)*Number(d.dataset.dir), behavior:'smooth'}); return; }
+  const l = e.target.closest('[data-lb]');
+  if (l){ const [g,i] = l.dataset.lb.split(':').map(Number); openLB(LB[g], i); }
+});
+
+/* ---------- lightbox ---------- */
+const lb = $('#lb');
+function showLB(){ const it = lbGroup[lbIdx]; $('#lbImg').src = it.src; $('#lbImg').alt = it.title;
+  $('#lbTitle').textContent = it.title; $('#lbMeta').textContent = it.meta; $('#lbCount').textContent = pad(lbIdx+1)+' / '+pad(lbGroup.length);
+  $('#lbPrev').hidden = $('#lbNext').hidden = lbGroup.length < 2; }
+function openLB(g,i){ stopSlides(); lbGroup = g; lbIdx = i; showLB(); lb.hidden = false; document.body.style.overflow='hidden'; $('#lbClose').focus(); }
+function closeLB(){ lb.hidden = true; document.body.style.overflow=''; }
+function stepLB(n){ lbIdx = (lbIdx + n + lbGroup.length) % lbGroup.length; showLB(); }
+$('#lbClose').onclick = closeLB; $('#lbPrev').onclick = ()=>stepLB(-1); $('#lbNext').onclick = ()=>stepLB(1);
+lb.addEventListener('click', e=>{ if (e.target===lb || e.target.tagName==='FIGURE') closeLB(); });
+addEventListener('keydown', e=>{ if (lb.hidden) return; if (e.key==='Escape') closeLB(); if (e.key==='ArrowRight') stepLB(1); if (e.key==='ArrowLeft') stepLB(-1); });
+
+/* ---------- negative cursor ---------- */
+const cur = $('#cursor'); let cx=0, cy=0, tx=0, ty=0, raf=0;
+function loop(){ cx += (tx-cx)*(reduce?1:.22); cy += (ty-cy)*(reduce?1:.22); cur.style.transform = `translate(${cx}px,${cy}px)`;
+  raf = (Math.abs(tx-cx)+Math.abs(ty-cy) > .3) ? requestAnimationFrame(loop) : 0; }
+addEventListener('pointermove', e=>{ if (e.pointerType!=='mouse') return; tx=e.clientX; ty=e.clientY; cur.classList.add('on');
+  cur.classList.toggle('big', !!e.target.closest('a,button,[role="tab"]') && !e.target.closest('.pc')); if (!raf) raf = requestAnimationFrame(loop); });
+document.addEventListener('mouseleave', ()=>cur.classList.remove('on'));
+
+/* ---------- gradient "video" for contato ---------- */
+const grad = (()=>{
+  const cv = $('#grad'), ctx = cv.getContext('2d'); let on=false, id=0; const t0=performance.now();
+  const blobs = [
+    {c:'255,40,56',  r:.55, ax:.30, ay:.35, sx:.00021, sy:.00017, px:0, py:1, a:.55},
+    {c:'90,12,22',   r:.70, ax:.70, ay:.60, sx:.00013, sy:.00019, px:2, py:0, a:.55},
+    {c:'245,239,230',r:.28, ax:.62, ay:.28, sx:.00017, sy:.00011, px:1, py:3, a:.22},
+    {c:'40,20,60',   r:.60, ax:.20, ay:.80, sx:.00011, sy:.00015, px:4, py:2, a:.55},
+    {c:'255,110,80', r:.35, ax:.85, ay:.85, sx:.00019, sy:.00013, px:3, py:5, a:.55}
+  ];
+  function size(){ const r = cv.getBoundingClientRect(); cv.width = Math.max(1,r.width*.5|0); cv.height = Math.max(1,r.height*.5|0); }
+  function draw(now){
+    const t = reduce ? 0 : now - t0, w = cv.width, h = cv.height, m = Math.max(w,h);
+    ctx.globalCompositeOperation = 'source-over'; ctx.fillStyle = '#131315'; ctx.fillRect(0,0,w,h);
+    ctx.globalCompositeOperation = 'lighter';
+    for (const b of blobs){
+      const x = (b.ax + Math.sin(t*b.sx + b.px)*.22) * w, y = (b.ay + Math.cos(t*b.sy + b.py)*.22) * h, r = b.r*m;
+      const g = ctx.createRadialGradient(x,y,0,x,y,r);
+      g.addColorStop(0,`rgba(${b.c},${b.a})`); g.addColorStop(1,`rgba(${b.c},0)`);
+      ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+    }
+    if (on && !reduce) id = requestAnimationFrame(draw);
+  }
+  addEventListener('resize', ()=>{ if(on){ size(); draw(performance.now()); } });
+  return { toggle(v){ on = v; cancelAnimationFrame(id); if (v){ size(); id = requestAnimationFrame(draw); } } };
+})();
+
+route();
+</script>
+</body>
+</html>
